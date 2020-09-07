@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#D33A3A</color>
+
+    <!-- evening resources -->
+    <color name="eveningTopGradientColor">#030632</color>
+    <color name="eveningBottomGradientColor">#4000A3</color>
+
+    <!-- morning resources -->
+    <color name="morningTopGradientColor">#32D0FC</color>
+    <color name="morningBottomGradientColor">#005CE0</color>
+
+    <!-- noon resources -->
+    <color name="noonTopGradientColor">#FC9F32</color>
+    <color name="noonBottomGradientColor">#D33A3A</color>
+
+    <!-- dawn resource -->
+    <color name="dawnTopGradientColor">#1C7891</color>
+    <color name="dawnBottomGradientColor">#162A2F</color>
+
+    <!-- night resource -->
+    <color name="nightTopGradientColor">#35416C</color>
+    <color name="nightBottomGradientColor">#151515</color>
+
+    <!-- text resource -->
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#99FFFFFF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="main_red">#D33A3A</color>
+    <color name="click_gray">#949494</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_light">#2CFFFFFF</color>
+    <color name="transparent_black">#D2000000</color>
+    <color name="transparent_gray">#ed202020</color>
+
+</resources>

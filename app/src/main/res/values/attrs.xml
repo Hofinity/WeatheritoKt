@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="revWindowBackgroundColor" format="color"/>
+    <attr name="blackAndWhiteTintColor" format="color"/>
+    <attr name="revTextColor" format="color"/>
+    <attr name="lightTextColor" format="color"/>
+
+</resources>

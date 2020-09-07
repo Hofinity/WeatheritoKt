@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/mainSwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="true"
+            android:background="@drawable/gradient_morning">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/currentTempImg"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="20dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/currentTempDegTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="60sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/minMaxDegTv"
+                    app:layout_constraintEnd_toEndOf="@id/minMaxDegTv"
+                    android:layout_marginTop="40dp"/>
+
+                <TextView
+                    android:id="@+id/minMaxDegTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="20sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/currentTempDegTv"
+                    android:layout_marginStart="40dp"/>
+
+                <TextView
+                    android:id="@+id/currentCityNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="17sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="@id/currentTempDegTv"
+                    app:layout_constraintTop_toBottomOf="@id/minMaxDegTv"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/roundedcorners_light_gray"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12sp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    app:drawableStartCompat="@drawable/ic_location_pin"
+                    android:drawablePadding="5dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/todayWeatherRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintTop_toBottomOf="@id/currentCityNameTv"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lastWeekWeatherRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    app:layout_constraintTop_toBottomOf="@id/todayWeatherRecyclerView"/>
+
+                <View
+                    android:id="@+id/dimView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent_black"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_lin"
+        android:orientation="vertical"
+        android:background="@drawable/roundedcorners_gray_progress_dialog"
+        android:padding="25dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_retry"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/error_txt"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:text="@string/retry"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/bottomSheetDesign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:behavior_hideable="false"
+            app:behavior_peekHeight="0dp"
+            app:elevation="4dp"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            tools:ignore="MissingPrefix">
+
+            <include
+                android:id="@+id/bottomInfoInclude"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/bottom_info_page"/>
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

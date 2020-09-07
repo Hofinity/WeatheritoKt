@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sgn_pascal">Pa</string>
+    <string name="sgn_celsius">°</string>
+    <string name="sgn_space">&#160;</string>
+    <string name="sgn_speed_km_h">km/h</string>
+
+</resources>

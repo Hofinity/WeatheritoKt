@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="t_today">Today</string>
+    <string name="t_tomorrow">Tomorrow</string>
+    <string name="t_morning">Morning</string>
+    <string name="t_day">Day</string>
+    <string name="t_evening">Evening</string>
+    <string name="t_night">Night</string>
+    <string name="t_pressure">Pressure</string>
+    <string name="t_humidity">Humidity</string>
+    <string name="t_dew_point">Dew Point</string>
+    <string name="t_wind_speed">Wind Speed</string>
+    <string name="t_choose_your_city">Choose Your City</string>
+
+</resources>
